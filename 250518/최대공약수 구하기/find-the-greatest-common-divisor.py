@@ -1,14 +1,7 @@
 n, m = map(int, input().split())
-num=2
-ans=[]
-# Please write your code here.
-while(True):
-    if n%num==0 and m%num ==0:
-        ans.append(num)
-    num+=1
-    if num>n:
-        break
-ans.sort()
-ans.reverse()
-print(ans[0])
-num=2
+
+def gcd(a, b):
+    for i in range(min(a, b), 0, -1):
+        if a % i == 0 and b % i == 0:
+            return i
+print(gcd(n,m))
